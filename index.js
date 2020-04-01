@@ -39,6 +39,8 @@ app.listen(5050);
 //发送数据
 var School={School:['s1','s3','s5']};
 var Major={Major:['s2','s4','s6']};
+var YourSchool={YourSchool:['YourSchool']};
+var YourMajor={YourMajor:['YourMajor']};
 var gender='gender';
 var studentnumber= 'studentnumber';
 var  phone='phone';
@@ -47,13 +49,15 @@ var  academy='academy';
 var  blur='blur';
 var  offerhelp='blur';
 var  wantgender='wantgender';
-function test(name,gender,studentnumber,phone,QQ,academy,School,Major,blur,offerhelp,wantgender){
+function test(name,gender,YourSchool,YourMajor,studentnumber,phone,QQ,academy,School,Major,blur,offerhelp,wantgender){
   $.ajax({
   type: "POST",
   url:"https://pairsys-1584407349297.appspot.com/submit",
   data:{
       name: '',
       gender: '',
+      YourSchool:'[]',
+      YourMajor:'[]',
       studentnumber: '',
       phone: '',
       QQ: '',

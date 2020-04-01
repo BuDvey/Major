@@ -91,8 +91,8 @@ border-radius: 4px;
 
 #title1
 {
-    font-size: 100px;
-    font-weight: bold;
+    font-size: 120px;
+  
     border-bottom: none;
     border-bottom-color:rgb(245, 181, 230) ;
     border-radius: 15px;
@@ -102,7 +102,7 @@ border-radius: 4px;
 }
 
 #title2{
-    font-size: 60px;
+    font-size: 50px;
     color: rgb(128, 110, 123);
     text-align: right;
     font-weight: 550;
@@ -125,7 +125,7 @@ border-radius: 4px;
     border: 2px;
     background-color: rgba(245, 141, 122, 0.329);
     margin-top: 7px;
-    width: 600px;
+    width: 550px;
    
     font-size: 40px;
    margin-left: 50px;

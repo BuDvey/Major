@@ -1,7 +1,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>专友，你好！</title>
+    <title>云搬专</title>
 
     <script src="index.js"></script>
     <script src="https://lib.sinaapp.com/js/jquery/2.0.2/jquery-2.0.2.min.js"></script>
@@ -34,16 +34,58 @@
     <div method="POST" url="https://pairsys-1584407349297.appspot.com/submit" enctype="multipart/form-data" >
         <br><br><br>
         <div id="title1">
-            &nbsp;专友，你好！
+            &nbsp;云搬专
         </div>
-        <div id="title2">专业交换日记•初遇篇&nbsp;&nbsp;&nbsp;</div>
+        <div id="title2">浙江大学勤工助学与创业实践指导中心&nbsp;&nbsp;&nbsp;</div>
         
             <div id="p1" class="page">
                 &nbsp;&nbsp;姓名： &nbsp;  <input type="text" name="name" class="text1"><br>
                 &nbsp;&nbsp;性别： &nbsp;  <input type="radio" name="gender" value="Male" class="radio">男
                                           <input type="radio" name="gender" value="Female" class="radio"> 女<br>
-                &nbsp;&nbsp;学院： &nbsp;  <input type="text" name="school" class="text1"><br>
-                &nbsp;&nbsp;专业： &nbsp;  <input type="text" name="major" class="text1"><br>
+                
+                <form name="frm1">             
+                 &nbsp;&nbsp;学院： <select name="YourSchool" onChange="redirec3(document.frm1.YourSchool.options.selectedIndex)" class="sel1">
+                    <option selected>请选择学院</option>
+                    <option value="1">人文学院</option>
+                    <option value="2">传媒与国际文化学院</option>
+                    <option value="3">外国语言文化与国际交流学院</option>
+                    <option value="4">经济学院</option>
+                    <option value="5">教育学院</option>
+                    <option value="6">管理学院</option>
+                    <option value="7">公共管理学院</option>
+                    <option value="8">光华法学院</option>
+                    <option value="9">数学科学学院</option>
+                    <option value="10">物理学系</option>
+                    <option value="11">心理与行为科学系</option>
+                    <option value="12">生命科学学院</option>
+                    <option value="13">环境与资源学院</option>
+                    <option value="14">化学系</option>
+                    <option value="15">地球科学学院</option>
+                    <option value="16">能源工程学院</option>
+                    <option value="17">化学工程与生物工程学院</option>
+                    <option value="18">高分子科学与工程学系</option>
+                    <option value="19">机械工程学院</option>
+                    <option value="20">材料科学与工程学院</option>
+                    <option value="21">建筑工程学院</option>
+                    <option value="22">电气工程学院</option>
+                    <option value="23">航空航天学院</option>
+                    <option value="24">计算机科学与技术学院</option>
+                    <option value="25">控制科学与工程学院</option>
+                    <option value="26">光电科学与工程学院</option>
+                    <option value="27">信息与电子工程学院</option>
+                    <option value="28">生物医学工程与仪器科学学院学院</option>
+                    <option value="29">竺可桢学院</option>
+                    <option value="30">海洋学院</option>
+                    <option value="31">农业与生物技术学院</option>
+                    <option value="32">动物科学学院</option>
+                    <option value="33">生物系统工程与食品科学学院</option>
+                    <option value="34">艺术与考古学院</option>
+                    <option value="35">医学院</option>
+                    <option value="36">药学院</option>            
+                </select> <br>
+                    &nbsp;&nbsp;专业：  <select name="YourMajor" class="sel2">
+                            <option value="请选择专业" selected>请选择专业</option><br> </select><br>
+                </form>   
                 &nbsp;&nbsp;年级： &nbsp;  <select name="grade" class="grade">
                                         <option value="1" class="grade">大一</option>
                                         <option value="2" class="grade">大二</option>
@@ -417,6 +459,14 @@
      function redirec2(x)
      {
      var temp = document.frm.s6;
+     for (i=0;i<select2[x].length;i++)
+     { temp.options[i]=new Option(select2[x][i].text,select2[x][i].value);}
+     temp.options[0].selected=true;
+     }
+
+     function redirec3(x)
+     {
+     var temp = document.frm1.YourMajor;
      for (i=0;i<select2[x].length;i++)
      { temp.options[i]=new Option(select2[x][i].text,select2[x][i].value);}
      temp.options[0].selected=true;
