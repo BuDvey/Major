@@ -76,20 +76,24 @@ function test(name,gender,YourSchool,YourMajor,studentnumber,phone,QQ,academy,Sc
 }
 
 //实时预览图片
-var fileInput = document.querySelector('input[type=file]'),
-previewImg = document.querySelector('img');
-fileInput.addEventListener('change', function () {
-var file = this.files[0];
-var reader = new FileReader();
-reader.addEventListener("load", function () {
-previewImg.src = reader.result;
-}, false);
-reader.readAsDataURL(file);
-}, false);
+function showImg(input) {
+  var file = input.files[0];
+  var reader = new FileReader()
+  // 图片读取成功回调函数
+  reader.onload = function(e) {
+      document.getElementById('upload').src=e.target.result
+  }
+  reader.readAsDataURL(file)
+}
 
  //模糊匹配的弹窗
  function display_alert()
  {
  alert("开启模糊匹配会为参与者匹配到该专业所属学院下的相似专业，适用于对于自己想去专业不够清晰明确只想去某个学院的参与者和希望提高匹配率的参与者")
  }
+ function display_alert1()
+ {
+ alert("恭喜！报名成功")
+ }
+
   
