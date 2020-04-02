@@ -1,8 +1,8 @@
 .page
 { 
-    margin-left: 80px;
-    line-height: 120px; 
-    width:820px;
+    margin-left: 40px;
+    line-height: 125px; 
+    width:900px;
 	border-top-style:none;
 	border-right-style:none;
 	border-bottom-style:none;
@@ -12,7 +12,7 @@
     background-color: rgba(250, 250, 240, 0.308);
     border-width: 25px;
     border-radius: 10px;
-    font-size: 40px;
+    font-size: 50px;
     font-family:YouYuan;
 }
 #shoujihaotext
@@ -22,9 +22,9 @@ border-radius: 4px;
     border: 2px;
     background-color:rgba(245, 141, 122, 0.329);
     margin-top: 7px;
-    width: 500px;
-    height:80px;
-     font-size: 40px;
+    width: 560px;
+    height:85px;
+     font-size: 50px;
 }
 #xuehaotext{
     border-radius: 4px;
@@ -32,9 +32,9 @@ border-radius: 4px;
     background-color: rgba(245, 141, 122, 0.329);
     margin-right: 10px;
     margin-top: 7px;
-    width: 500px;
-    height:80px;
-    font-size: 40px;
+    width: 560px;
+    height:85px;
+    font-size: 50px;
 }
 #xueyuantext{
     margin-right: 10px;
@@ -42,9 +42,9 @@ border-radius: 4px;
     border: 2px;
     background-color: rgba(245, 141, 122, 0.329);
     margin-top: 7px;
-    width: 500px;
-    height:80px;
-    font-size: 40px;
+    width: 560px;
+    height:85px;
+    font-size: 50px;
 }
 #qqtext{
     margin-right: 10px;
@@ -52,9 +52,9 @@ border-radius: 4px;
     border: 2px;
     background-color: rgba(245, 141, 122, 0.329);
     margin-top: 7px;
-    width: 500px;
-    height:80px;
-    font-size: 40px;
+    width: 560px;
+    height:85px;
+    font-size: 50px;
 }
 .text1{
     margin-right: 10px;
@@ -62,19 +62,19 @@ border-radius: 4px;
     border: 2px;
     background-color: rgba(245, 141, 122, 0.329);
     margin-top: 7px;
-    width: 500px;
-    height:80px;
-    font-size: 40px;
+    width: 560px;
+    height:85px;
+    font-size: 50px;
 }
 
 .grade{
-    font-size:40px;
+    font-size:50px;
     background-color: rgba(245, 141, 122, 0.329);
     width:180px;
 
 }
 #next1{
-    margin-left: 230pt;
+    margin-left: 235pt;
    border-style :solid;
    border-width: 14px;
    border-color: rgb(247,199,206);
@@ -82,16 +82,16 @@ border-radius: 4px;
    background-color: rgb(247,199,206);
    margin-bottom: 15px;
    border-bottom-color: rgb(253, 250, 204);;
-   letter-spacing:2px;
+   letter-spacing:4px;
    color:black;
    height:80px;
-   width: 150px;
-   font-size: 30px;
+   width: 180px;
+   font-size: 40px;
 }
 
 #title1
 {
-    font-size: 120px;
+    font-size: 140px;
   
     border-bottom: none;
     border-bottom-color:rgb(245, 181, 230) ;
@@ -102,32 +102,41 @@ border-radius: 4px;
 }
 
 #title2{
-    font-size: 50px;
+    font-size: 65px;
     color: rgb(128, 110, 123);
     text-align: right;
     font-weight: 550;
 }
 
+.subtitle
+{
+   font-weight: 400;
+    font-size: 59px;
+    margin-left: 20px;
+    font-family:YouYuan;
+    color:rgb(46, 45, 46);
+}
 
 
 .sel2{
+    height:85px;
     margin-left: 25px;
     border-radius: 4px;
     border: 2px;
     background-color: rgba(245, 141, 122, 0.329);
     margin-top: 7px;
-    font-size: 40px;
+    font-size: 50px;
     margin-left: 50px;
-    width:400px;
+    width:560px;
 }
 .sel1{
     border-radius: 4px;
     border: 2px;
     background-color: rgba(245, 141, 122, 0.329);
     margin-top: 7px;
-    width: 550px;
-   
-    font-size: 40px;
+    width: 560px;
+    height:85px;
+    font-size: 50px;
    margin-left: 50px;
 }
 
@@ -142,8 +151,8 @@ border-radius: 4px;
     border-radius: 10px;
 }
 .radio{
-    width:40px;
-    height:40px;
+    width:50px;
+    height:50px;
 }
 
 #match{
@@ -152,7 +161,7 @@ border-radius: 4px;
     background-color: rgba(245, 141, 122, 0.329);
     border-radius: 4px;
     width:90px;
-    height:50px;
+    height:70px;
     font-size: 50px;
 }
 
@@ -165,27 +174,27 @@ border-radius: 4px;
     background-color: rgb(247,199,206);
     margin-bottom: 15px;
     border-bottom-color: rgb(253, 250, 204);
-    letter-spacing:2px;
+    letter-spacing:4px;
     color:black;
     height:80px;
-    width: 150px;
-    font-size: 30px;
+    width: 180px;
+    font-size: 40px;
 }
 
 #next2{
-    margin-left: 280pt;
+    margin-left: 330pt;
     border-style :solid;
     border-color: rgb(247,199,206);
     border-width: 14px;
-     text-decoration:none;
+    text-decoration:none;
     background-color: rgb(247,199,206);
     margin-bottom: 15px;
     border-bottom-color: rgb(253, 250, 204);
-    letter-spacing:2px;
+    letter-spacing:4px;
     color:black;
     height:80px;
-    width: 150px;
-    font-size: 30px;
+    width: 180px;
+    font-size: 40px;
 }
 
 #title4{
@@ -201,20 +210,21 @@ border-radius: 4px;
 
 
 #back3{
-    margin-left: 30pt;
+    margin-left: 37pt;
     border-style :solid;
     border-color: rgb(247,199,206);
      text-decoration:none;
     background-color: rgb(247,199,206);
     margin-bottom: 15px;
     border-bottom-color: rgb(253, 250, 204);
-    letter-spacing:2px;
-    color:black;
-    border-width: 14px;
-    height:80px;
-    width: 150px;
-    font-size: 30px;
+    letter-spacing:4px;
    
+    border-width: 14px;
+    letter-spacing:4px;
+    color:black;
+    height:80px;
+    width: 180px;
+    font-size: 40px;
 }
 
 #sub{
@@ -225,11 +235,12 @@ border-radius: 4px;
     background-color: rgb(247,199,206);
     margin-bottom: 15px;
     border-bottom-color: rgb(253, 250, 204);
-    letter-spacing:2px;
-    color:black;
-    font-size:40px;
+    letter-spacing:4px;
+    
     border-width: 14px;
+    letter-spacing:4px;
+    color:black;
     height:80px;
-    width: 150px;
-    font-size: 30px;
+    width: 180px;
+    font-size: 40px;
 }

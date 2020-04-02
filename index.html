@@ -36,9 +36,9 @@
         <div id="title1">
             &nbsp;云搬专
         </div>
-        <div id="title2">浙江大学勤工助学与创业实践指导中心&nbsp;&nbsp;&nbsp;</div>
-        
+        <div id="title2">浙大勤创&nbsp;&nbsp;&nbsp;</div>
             <div id="p1" class="page">
+               <p  class='subtitle'>—基础信息————————</p>
                 &nbsp;&nbsp;姓名： &nbsp;  <input type="text" name="name" class="text1"><br>
                 &nbsp;&nbsp;性别： &nbsp;  <input type="radio" name="gender" value="Male" class="radio">男
                                           <input type="radio" name="gender" value="Female" class="radio"> 女<br>
@@ -105,6 +105,7 @@
       
         
             <div id="p2" class="page">  
+                <p  class='subtitle'>—志愿选择————————</p>
                 <form name="frm">
                     &nbsp; 第一志愿——<br>&nbsp; 想要了解的学院（系）:
                         <select name="s1" onChange="redirec(document.frm.s1.options.selectedIndex)" class="sel1">
@@ -248,25 +249,26 @@
                 
                 &nbsp; 是否模糊匹配 <input type="button" onclick="display_alert()" value="？" id="match" />
                                    <input type="radio" name="blur" value="yes" class="radio">是
-                                   <input type="radio" name="blur" value="no" class="radio">否<br><br>
-                            
-              &nbsp; 你愿意单方面帮助那位<br>  &nbsp; 心仪你专业的TA了解你<br>  &nbsp; 的专业吗？ <br>
+                                   <input type="radio" name="blur" value="no" class="radio">否
+            <p>
+              &nbsp; 你愿意单方面帮助那位心仪你专业的<br>&nbsp; TA了解你的专业吗？ 
               &nbsp;&nbsp;<input type="radio" name="offerhelp" value="是" class="radio">&nbsp;是
                           <input type="radio" name="offerhelp" value="否" class="radio">&nbsp;否<br>
-                &nbsp;【开启会提高匹配优先级哦】<br><br>
-            
+                &nbsp;【开启会提高匹配优先级哦】<br>
+            </p>
                 &nbsp; 选择同伴性别：<input type="checkbox" name="wantgender" value="男" class="radio">男
                                     <input type="checkbox" name="wantgender" value="女" class="radio">女<br>&nbsp;【可多选】 <br>
                 <button  id="back2" type="button">上一页</button>  <button id="next2" type="button">下一页</button><br><br>
             </div>
 
             <div id="p3" class="page">
+                <p></p>
                 <div id="p3">
-                    <div style="font-weight: bold;text-align: center;font-size: 80px;">最后一步啦！</div>
+                    <div style="font-weight: bold;text-align: center;font-size: 80px;">——最后一步啦！——</div>
                     <div style="text-align: center;"> 转发推文至pyq<br>并上传截图 <br>视为报名成功<br></div>
                
                     <input type="file" name="photo" style="position: absolute;margin-left:70px;font-size: 50px;width: 600px;height:1000px;opacity: 0;"><br>
-                    <img src="" height="550" width="500"  title="preview-img" style="margin-left: 160px;background-color: rgb(247,199,206);font-size: 50px;height:900px;"><br><br>
+                    <img src="" height="550" width="500"  title="preview-img" style="margin-left: 200px;background-color: rgba(245, 205, 211, 0.623);font-size: 50px;height:900px;"><br><br>
              
                     <button id="back3" type="button">上一页</button> 
                     <input type="submit" name="submit" value="提交" id="sub" onclick="test(name,gender,studentnumber,phone,QQ,academy,School,Major,blur,offerhelp,wantgender)""><br><br>
