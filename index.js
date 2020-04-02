@@ -67,9 +67,9 @@ function test(name,gender,YourSchool,YourMajor,studentnumber,phone,QQ,academy,Sc
       academy:document.getElementsByName('academy').value,
       School:'[]',
       Major:'[]',
-      blur:document.getElementsByName('blur').value,
-      offerhelp:document.getElementsByName('offerhelp').value,
-      wantgender:document.getElementsByName('wantgender').value,
+      blur:'',
+      offerhelp:'',
+      wantgender:'',
       },
       datatype:"json",
       success: function(msg){
@@ -142,6 +142,7 @@ function isNull(){
       wantresult=true;break;
     }
   }
+  var file=document.getElementById('upload-input');
 
   if(name == '')
   {
@@ -173,26 +174,7 @@ function isNull(){
     alert("信息填写不完整，提交失败！");
     return false;
   }
-  else if(s3=='请选择学院')
-  {
-    alert("信息填写不完整，提交失败！");
-    return false;
-  } 
-  else if(s4=="请选择专业")
-  {
-    alert("信息填写不完整，提交失败！");
-    return false;
-  }
-  else if(s5=='请选择学院')
-  {
-    alert("信息填写不完整，提交失败！");
-    return false;
-  } 
-  else if(s6=="请选择专业")
-  {
-    alert("信息填写不完整，提交失败！");
-    return false;
-  }
+ 
   else if(studentnumber=='')
   {alert("信息填写不完整，提交失败！");
   return false;}
@@ -217,7 +199,9 @@ function isNull(){
   else if(!wantresult)
   {alert("信息填写不完整，提交失败！");
   return false;} 
-
+  else if(file.value=='')
+  {alert("截图未上传，提交失败！");
+    return false;}  
   else{
     alert("恭喜！报名成功");
   }
