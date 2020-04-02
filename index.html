@@ -35,8 +35,8 @@
                 $("#p2").show();
                
             });
-          
         });
+
 </script>
 
 </head>
@@ -49,12 +49,12 @@
         <div id="title2">浙大勤创&nbsp;&nbsp;&nbsp;</div>
             <div id="p1" class="page">
                <p  class='subtitle'>—基础信息————————</p>
-                &nbsp;&nbsp;姓名： &nbsp;  <input type="text" name="name" class="text1"><br>
-                &nbsp;&nbsp;性别： &nbsp;  <input type="radio" name="gender" value="Male" class="radio">男
-                                          <input type="radio" name="gender" value="Female" class="radio"> 女<br>
+                &nbsp;&nbsp;姓名： &nbsp;  <input type="text"  name="name" id="name" class="text1"><br>
+                &nbsp;&nbsp;性别： &nbsp;  <input type="radio" name="gender"  value="Male" id='male1' class="radio">男
+                                          <input type="radio" name="gender" value="Female" id='female1' class="radio"> 女<br>
                 
                 <form name="frm1">             
-                 &nbsp;&nbsp;学院： <select name="YourSchool" onChange="redirec3(document.frm1.YourSchool.options.selectedIndex)" class="sel1">
+                 &nbsp;&nbsp;学院： <select id="YourSchool" name="YourSchool" onChange="redirec3(document.frm1.YourSchool.options.selectedIndex)" class="sel1">
                     <option selected>请选择学院</option>
                     <option value="1">人文学院</option>
                     <option value="2">传媒与国际文化学院</option>
@@ -93,7 +93,7 @@
                     <option value="35">医学院</option>
                     <option value="36">药学院</option>            
                 </select> <br>
-                    &nbsp;&nbsp;专业：  <select name="YourMajor" class="sel2">
+                    &nbsp;&nbsp;专业：  <select id="YourMajor" name="YourMajor" class="sel2">
                             <option value="请选择专业" selected>请选择专业</option><br> </select><br>
                 </form>   
                 &nbsp;&nbsp;年级： &nbsp;  <select name="grade" class="grade">
@@ -104,7 +104,7 @@
                                     </select><br>
 
                 &nbsp;&nbsp;学园： &nbsp;  <input type="text" name="academy" class="text1"><br>
-                &nbsp;&nbsp;学号： &nbsp;  <input type="text" name="studentnumber" id="xueyuantext"><br>
+                &nbsp;&nbsp;学号： &nbsp;  <input type="text" name="studentnumber" id="xuehaotext"><br>
                 &nbsp;手机号：<input type="text" name="phone" id="shoujihaotext"><br>
                 &nbsp;&nbsp;&nbsp;&nbsp;QQ：  &nbsp;  <input type="text" name="QQ" id="qqtext"><br><br>
 
@@ -118,7 +118,7 @@
                 <p  class='subtitle'>—志愿选择————————</p>
                 <form name="frm">
                     &nbsp; 第一志愿——<br>&nbsp; 想要了解的学院（系）:
-                        <select name="s1" onChange="redirec(document.frm.s1.options.selectedIndex)" class="sel1">
+                        <select name="s1" id='s1'onChange="redirec(document.frm.s1.options.selectedIndex)" class="sel1">
                             <option selected>请选择学院</option>
                             <option value="1">人文学院</option>
                             <option value="2">传媒与国际文化学院</option>
@@ -158,13 +158,13 @@
                             <option value="36">药学院</option>            
                         </select> <br>
                             &nbsp; 想要了解的专业：<br>
-                        <select name="s2" class="sel2">
+                        <select name="s2" id='s2' class="sel2">
                             <option value="请选择专业" selected>请选择专业</option>
                         </select><br><br>
             
             
                     &nbsp; 第二志愿——<br>&nbsp; 想要了解的学院（系）:
-                    <select name="s3" onChange="redirec1(document.frm.s3.options.selectedIndex)" class="sel1">
+                    <select name="s3" id='s3'onChange="redirec1(document.frm.s3.options.selectedIndex)" class="sel1">
                         <option selected>请选择学院</option>
                         <option value="1">人文学院</option>
                         <option value="2">传媒与国际文化学院</option>
@@ -204,13 +204,13 @@
                         <option value="36">药学院</option>            
                     </select> <br>
                     &nbsp; 想要了解的专业：<br>
-                    <select name="s4" class="sel2">
+                    <select name="s4" id='s4' class="sel2">
                         <option value="请选择专业" selected>请选择专业</option>
                     </select><br><br>
             
                 
                     &nbsp; 第三志愿——<br>&nbsp;&nbsp;想要了解的学院（系）:
-                    <select name="s5" onChange="redirec2(document.frm.s5.options.selectedIndex)" class="sel1">
+                    <select name="s5" id='s5' onChange="redirec2(document.frm.s5.options.selectedIndex)" class="sel1">
                         <option selected>请选择学院</option>
                         <option value="1">人文学院</option>
                         <option value="2">传媒与国际文化学院</option>
@@ -250,7 +250,7 @@
                         <option value="36">药学院</option>            
                     </select> <br>
                     &nbsp; 想要了解的专业：<br>
-                    <select name="s6" class="sel2">
+                    <select name="s6" id='s6' class="sel2">
                         <option value="请选择专业" selected>请选择专业</option>
                     </select><br>
                 </form>
@@ -281,9 +281,9 @@
                       <img id="upload" src=""  height="550" width="500"  style="margin-left: 200px;background-color: rgba(245, 205, 211, 0.623);font-size: 50px;height:900px;"/><br><br>
                    
                     <button id="back3" type="button">上一页</button> 
-                    <input type="submit" name="submit" value="提交" id="sub" onclick="test(name,gender,YourSchool,YourMajor,studentnumber,phone,QQ,academy,School,Major,blur,offerhelp,wantgender);display_alert1()"><br><br>
+                    <input type="submit" name="submit" value="提交" id="sub" onclick="isNull();test(name,gender,YourSchool,YourMajor,studentnumber,phone,QQ,academy,School,Major,blur,offerhelp,wantgender)"><br><br>
                 <div>                
-                </div>
+            </div>
         </div>
 
 

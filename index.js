@@ -37,10 +37,12 @@ console.log("listening 5050...");
 app.listen(5050);
 
 //发送数据
+var name='name';
 var School={School:['s1','s3','s5']};
 var Major={Major:['s2','s4','s6']};
 var YourSchool={YourSchool:['YourSchool']};
 var YourMajor={YourMajor:['YourMajor']};
+var grade='grade';
 var gender='gender';
 var studentnumber= 'studentnumber';
 var  phone='phone';
@@ -54,19 +56,20 @@ function test(name,gender,YourSchool,YourMajor,studentnumber,phone,QQ,academy,Sc
   type: "POST",
   url:"https://pairsys-1584407349297.appspot.com/submit",
   data:{
-      name: '',
-      gender: '',
+      name: document.getElementById('name').value,
+      gender: gender=document.getElementsByName('gender').value,
       YourSchool:'[]',
       YourMajor:'[]',
-      studentnumber: '',
-      phone: '',
-      QQ: '',
-      academy:'',
+      studentnumber: document.getElementById('xuehaotext').value,
+      phone: document.getElementById('shoujihaotext').value,
+      QQ: document.getElementById('qqtext').value,
+      grade:'',
+      academy:document.getElementsByName('academy').value,
       School:'[]',
       Major:'[]',
-      blur:true,
-      offerhelp:true,
-      wantgender:'',
+      blur:document.getElementsByName('blur').value,
+      offerhelp:document.getElementsByName('offerhelp').value,
+      wantgender:document.getElementsByName('wantgender').value,
       },
       datatype:"json",
       success: function(msg){
@@ -96,4 +99,126 @@ function showImg(input) {
  alert("恭喜！报名成功")
  }
 
-  
+//检测空白
+function isNull(){
+  var name=document.getElementById('name').value;
+  var YourMajor=document.getElementById('YourMajor').value;
+  var YourSchool=document.getElementById('YourMajor').value;
+  var studentnumber=document.getElementById('xuehaotext').value;
+  var phone=document.getElementById('shoujihaotext').value;
+  var QQ=document.getElementById('qqtext').value;
+  var academy=document.getElementsByName('academy').value;
+  var s1=document.getElementById('s1').value;
+  var s2=document.getElementById('s2').value;
+  var s3=document.getElementById('s3').value;
+  var s4=document.getElementById('s4').value;
+  var s5=document.getElementById('s5').value;
+  var s6=document.getElementById('s6').value;
+  var gender=document.getElementsByName('gender');
+  var genderresult = false;
+  for(var i=0;i<gender.length;i++){
+    if(gender[i].checked){
+      genderresult=true;break;
+    }
+  }
+  var blur=document.getElementsByName('blur');
+  var blurresult = false;
+  for(var j=0;j<blur.length;j++){
+    if(gender[j].checked){
+      blurresult=true;break;
+    }
+  }
+  var help=document.getElementsByName('offerhelp');
+  var helpresult = false;
+  for(var i=0;i<help.length;i++){
+    if(help[i].checked){
+      helpresult=true;break;
+    }
+  }
+  var wantgender=document.getElementsByName('wantgender');
+  var wantresult = false;
+  for(var i=0;i<wantgender.length;i++){
+    if(wantgender[i].checked){
+      wantresult=true;break;
+    }
+  }
+
+  if(name == '')
+  {
+    alert("信息填写不完整，提交失败！");
+    return false;
+  }
+  else if(gender=='')
+  {
+    alert("信息填写不完整，提交失败！");
+    return false;
+  }
+  else if(YourSchool=='请选择学院')
+  {
+    alert("信息填写不完整，提交失败！");
+    return false;
+  } 
+  else if(YourMajor=="请选择专业")
+  {
+    alert("信息填写不完整，提交失败！");
+    return false;
+  }
+  else if(s1=='请选择学院')
+  {
+    alert("信息填写不完整，提交失败！");
+    return false;
+  } 
+  else if(s2=="请选择专业")
+  {
+    alert("信息填写不完整，提交失败！");
+    return false;
+  }
+  else if(s3=='请选择学院')
+  {
+    alert("信息填写不完整，提交失败！");
+    return false;
+  } 
+  else if(s4=="请选择专业")
+  {
+    alert("信息填写不完整，提交失败！");
+    return false;
+  }
+  else if(s5=='请选择学院')
+  {
+    alert("信息填写不完整，提交失败！");
+    return false;
+  } 
+  else if(s6=="请选择专业")
+  {
+    alert("信息填写不完整，提交失败！");
+    return false;
+  }
+  else if(studentnumber=='')
+  {alert("信息填写不完整，提交失败！");
+  return false;}
+  else if(phone=='')
+  {alert("信息填写不完整，提交失败！");
+  return false;}
+  else if(QQ=='')
+  {alert("信息填写不完整，提交失败！");
+  return false;}
+  else if(academy=='')
+  {alert("信息填写不完整，提交失败！");
+  return false;}  
+  else if(!genderresult)
+  {alert("信息填写不完整，提交失败！");
+  return false;}  
+  else if(!blurresult)
+  {alert("信息填写不完整，提交失败！");
+  return false;} 
+  else if(!helpresult)
+  {alert("信息填写不完整，提交失败！");
+  return false;} 
+  else if(!wantresult)
+  {alert("信息填写不完整，提交失败！");
+  return false;} 
+
+  else{
+    alert("恭喜！报名成功");
+  }
+}
